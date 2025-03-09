@@ -73,7 +73,6 @@ const plugins = [
           indexSettings: {
             searchableAttributes: ["title", "description", "variant_sku"],
             displayedAttributes: [
-              "id",
               "title",
               "description",
               "variant_sku",
@@ -82,6 +81,15 @@ const plugins = [
             ],
           },
           primaryKey: "id",
+          transformer: (product) => ({
+            id: product.id,
+            title: product.title,
+            description: product.description,
+            variant_sku: product.variant_sku,
+            thumbnail: product.thumbnail,
+            handle: product.handle,
+            // include other attributes as needed
+          }),
         },
       },
     },
