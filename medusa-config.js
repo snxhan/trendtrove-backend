@@ -58,7 +58,7 @@ const plugins = [
         open: process.env.OPEN_BROWSER !== "false",
       },
     },
-  },
+  },/*
   {
     resolve: `medusa-plugin-meilisearch`,
     options: {
@@ -93,7 +93,7 @@ const plugins = [
         },
       },
     },
-  },
+  },*/
   {
     resolve: `medusa-payment-stripe`,
     options: {
